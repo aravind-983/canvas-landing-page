@@ -85,7 +85,7 @@
 }
 
 /* Background overlay activation on card hover */
-.work-step-card:hover ~ .hover-background-overlay,
+.work-step-card:hover~.hover-background-overlay,
 .work-section:has(.work-step-card:hover) .hover-background-overlay {
     /* opacity: 1; */
     visibility: visible;
@@ -519,22 +519,23 @@
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
+
     .work-step-card,
     .work-step-video,
     .hover-background-overlay {
         transition: none;
     }
-    
+
     .work-step-card:hover,
     .work-step-card:focus {
         transform: none;
     }
-    
+
     .work-step-card:hover .work-step-video,
     .work-step-card:focus .work-step-video {
         transform: none;
     }
-    
+
     .work-steps-grid:hover .work-step-card:not(:hover) {
         transform: none;
     }
