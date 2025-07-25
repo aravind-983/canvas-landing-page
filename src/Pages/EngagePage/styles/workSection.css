@@ -368,7 +368,17 @@
         height: 180px;
     }
 
-    /* Mobile hover effects */
+    /* Disable problematic hover effects on mobile */
+    .hover-background-overlay {
+        display: none;
+    }
+
+    .work-steps-grid:hover .work-step-card:not(:hover) {
+        opacity: 1;
+        transform: none;
+    }
+
+    /* Simplified mobile hover effects */
     .work-step-card:hover {
         transform: translateY(-4px) scale(1.05);
     }

@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CTAButton from '../../../components/CTAButton';
 import PlayIcon from '../assets/video-section/Play.png';
-import EngageVideo from '../assets/video-section/Engage page First Scroll.mp4';
+import EngageVideo from '../assets/video-section/Engage page 1st scroll video.mp4';
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
 import '../styles/videoSection.css';
 
@@ -39,7 +39,7 @@ const VideoSection = () => {
                         <source src={EngageVideo} type="video/mp4" />
                         <source src={EngageVideo} type="video/quicktime" />
                         Your browser does not support the video tag.
-                    source</video>
+                        source</video>
 
                     {/* Video Overlay Content */}
                     <div className="video-overlay">
@@ -49,14 +49,14 @@ const VideoSection = () => {
                                     Make Every Peak Moment Pay Off.
                                 </h1>
                                 <p className="video-description">
-                                Canvas Engage converts emotion into first-party data and real-time interactions — no stream disruption.
+                                    Canvas Engage converts emotion into first-party data and real-time interactions — no stream disruption.
                                 </p>
                                 <p className="video-subtitle">
-                                Tap into fan intent, live reactions, or sponsor conversions at cue-level.
+                                    Tap into fan intent, live reactions, or sponsor conversions at cue-level.
                                 </p>
-                                
+
                                 <div className="video-cta-container">
-                                    <CTAButton 
+                                    <CTAButton
                                         name="Request demo"
                                         className="video-cta-button"
                                     />
@@ -65,15 +65,15 @@ const VideoSection = () => {
 
                             {/* Watch Demo Video Button */}
                             <div className="watch-demo-container">
-                                <button 
+                                <button
                                     className="watch-demo-button"
                                     onClick={handleWatchDemo}
                                     aria-label="Watch demo video"
                                 >
-                                    <img 
-                                        src={PlayIcon} 
-                                        alt="Play" 
-                                        className="play-icon" 
+                                    <img
+                                        src={PlayIcon}
+                                        alt="Play"
+                                        className="play-icon"
                                     />
                                     <span className="watch-demo-text">
                                         Watch demo video

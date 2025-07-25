@@ -550,12 +550,18 @@
     }
     
     .hover-background-overlay {
-        backdrop-filter: blur(4px);
+        backdrop-filter: none;
+        background: rgba(0, 0, 0, 0.3);
     }
 }
 
 @media (max-width: 480px) {
     .product-feature-card:hover {
         transform: translateY(-2px) scale(1.03);
+    }
+    
+    .hover-background-overlay {
+        backdrop-filter: none;
+        background: rgba(0, 0, 0, 0.2);
     }
 }

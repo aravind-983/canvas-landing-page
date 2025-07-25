@@ -131,7 +131,7 @@
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
 }
 
-.watch-demo-button:active{
+.watch-demo-button:active {
     border: none;
 }
 
@@ -377,8 +377,12 @@
     }
 
     .watch-demo-button {
-        padding: 12px 16px;
+        padding: 1em 2em;
         gap: 8px;
+    }
+
+    .watch-demo-button>span {
+        font-size: .7em;
     }
 
     .play-icon {
