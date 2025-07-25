@@ -1,0 +1,564 @@
+/* Work Section Component Styles */
+.work-section {
+    position: relative;
+    padding: 1em 0;
+    overflow: hidden;
+}
+
+/* Hover Background Overlay */
+.hover-background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* Background ellipse */
+.work-ellipse-812 {
+    position: absolute;
+    top: 50%;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    z-index: 0;
+    transform: translateY(-50%);
+}
+
+.work-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Section Title */
+.work-title {
+    font-family: var(--font-family-montserrat);
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 0 60px 0;
+}
+
+/* Work Steps Grid */
+.work-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.work-step-card {
+    position: relative;
+    background: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.work-step-card:hover {
+    transform: translateY(-8px) scale(1.08);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+.work-step-card:hover .work-step-video-container {
+    overflow: visible;
+    border-radius: 16px;
+}
+
+.work-step-card:hover .work-step-video {
+    transform: scale(1.15);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Background overlay activation on card hover */
+.work-step-card:hover ~ .hover-background-overlay,
+.work-section:has(.work-step-card:hover) .hover-background-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Sibling card effects during hover */
+.work-steps-grid:hover .work-step-card:not(:hover) {
+    opacity: 0.7;
+    transform: scale(0.95);
+}
+
+.work-steps-grid .work-step-card:hover {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.08);
+}
+
+.work-step-video-container {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background: #000000;
+    border-radius: 16px 16px 0 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-step-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hide video controls completely */
+.work-step-video::-webkit-media-controls {
+    display: none !important;
+}
+
+.work-step-video::-webkit-media-controls-panel {
+    display: none !important;
+}
+
+.work-step-video::-webkit-media-controls-play-button {
+    display: none !important;
+}
+
+.work-step-video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+}
+
+.work-step-video::-moz-media-controls {
+    display: none !important;
+}
+
+.work-step-video::-ms-media-controls {
+    display: none !important;
+}
+
+.work-step-content {
+    padding: 24px 20px 60px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.work-step-title {
+    font-family: var(--font-family-montserrat);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #000000;
+    margin: 0;
+}
+
+.work-step-description {
+    font-family: var(--font-family-montserrat);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6B7280;
+    margin: 0;
+}
+
+.work-step-badge {
+    position: absolute;
+    bottom: -.8em;
+    right: -.3em;
+    background: var(--gradient);
+    color: #FFFFFF;
+    font-family: var(--font-family-montserrat);
+    font-weight: 600;
+    font-size: 12px;
+    padding: 1em 2em;
+    border-radius: 1em;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-step-badge::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #000000;
+    border-radius: calc(1em - 2px);
+    z-index: -1;
+}
+
+.work-step-badge>* {
+    position: relative;
+    z-index: 1;
+    padding: 1em 2em;
+}
+
+/* Bottom Content */
+.work-bottom-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.work-bottom-title {
+    font-family: var(--font-family-montserrat);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.4;
+    max-width: 800px;
+    margin: 0;
+}
+
+.work-cta-container {
+    margin-top: 8px;
+}
+
+/* Large Desktop Responsive Design */
+@media (min-width: 1440px) {
+    .work-section {
+        padding: 1em 0;
+    }
+
+    .work-container {
+        padding: 0 80px;
+    }
+
+    .work-title {
+        font-size: 48px;
+        margin-bottom: 80px;
+    }
+
+    .work-steps-grid {
+        gap: 40px;
+        margin-bottom: 100px;
+    }
+
+    .work-step-video-container {
+        height: 200px;
+    }
+
+    .work-step-content {
+        padding: 28px 24px 70px 24px;
+    }
+
+    .work-step-title {
+        font-size: 20px;
+    }
+
+    .work-step-description {
+        font-size: 15px;
+    }
+
+    .work-bottom-title {
+        font-size: 28px;
+    }
+
+    .work-ellipse-812 {
+        width: 500px;
+        height: 500px;
+        right: -150px;
+    }
+}
+
+/* Tablet Responsive Design */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .work-section {
+        padding: 1em 0;
+    }
+
+    .work-container {
+        padding: 0 40px;
+    }
+
+    .work-title {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
+
+    .work-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        margin-bottom: 60px;
+    }
+
+    .work-step-video-container {
+        height: 160px;
+    }
+
+    /* Tablet hover effects */
+    .work-step-card:hover {
+        transform: translateY(-4px) scale(1.05);
+    }
+
+    .work-step-card:hover .work-step-video {
+        transform: scale(1.10);
+    }
+
+    .work-steps-grid .work-step-card:hover {
+        transform: translateY(-4px) scale(1.05);
+    }
+
+    .work-step-content {
+        padding: 20px 16px 55px 16px;
+    }
+
+    .work-step-title {
+        font-size: 16px;
+    }
+
+    .work-step-description {
+        font-size: 13px;
+    }
+
+    .work-bottom-content {
+        gap: 24px;
+    }
+
+    .work-bottom-title {
+        font-size: 20px;
+    }
+
+    .work-ellipse-812 {
+        width: 300px;
+        height: 300px;
+        right: -80px;
+    }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .work-section {
+        padding: 1em 0;
+    }
+
+    .work-container {
+        padding: 0 30px;
+    }
+
+    .work-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .work-steps-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 50px;
+    }
+
+    .work-step-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .work-step-video-container {
+        height: 180px;
+    }
+
+    /* Mobile hover effects */
+    .work-step-card:hover {
+        transform: translateY(-4px) scale(1.05);
+    }
+
+    .work-step-card:hover .work-step-video {
+        transform: scale(1.10);
+    }
+
+    .work-steps-grid .work-step-card:hover {
+        transform: translateY(-4px) scale(1.05);
+    }
+
+    .work-step-content {
+        padding: 20px 16px 55px 16px;
+    }
+
+    .work-step-title {
+        font-size: 16px;
+    }
+
+    .work-step-description {
+        font-size: 13px;
+    }
+
+    .work-bottom-content {
+        gap: 20px;
+    }
+
+    .work-bottom-title {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .work-ellipse-812 {
+        width: 250px;
+        height: 250px;
+        right: -60px;
+        opacity: 0.2;
+    }
+}
+
+/* Small Mobile Responsive Design */
+@media (max-width: 480px) {
+    .work-section {
+        padding: 1em 0;
+    }
+
+    .work-container {
+        padding: 0 20px;
+    }
+
+    .work-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .work-steps-grid {
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    .work-step-video-container {
+        height: 160px;
+    }
+
+    /* Small mobile hover effects */
+    .work-step-card:hover {
+        transform: translateY(-2px) scale(1.03);
+    }
+
+    .work-step-card:hover .work-step-video {
+        transform: scale(1.08);
+    }
+
+    .work-steps-grid .work-step-card:hover {
+        transform: translateY(-2px) scale(1.03);
+    }
+
+    .work-step-content {
+        padding: 16px 12px 50px 12px;
+        gap: 8px;
+    }
+
+    .work-step-title {
+        font-size: 15px;
+    }
+
+    .work-step-description {
+        font-size: 12px;
+    }
+
+    .work-step-badge {
+        bottom: 12px;
+        right: 12px;
+        font-size: 11px;
+        padding: .8em 2em;
+    }
+
+    .work-bottom-content {
+        gap: 16px;
+    }
+
+    .work-bottom-title {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .work-ellipse-812 {
+        width: 200px;
+        height: 200px;
+        right: -50px;
+        opacity: 0.15;
+    }
+}
+
+/* Focus and Accessibility */
+.work-cta-button:focus {
+    outline: 2px solid #3FD1CC;
+    outline-offset: 2px;
+}
+
+.work-step-card:focus-within {
+    outline: 2px solid #3FD1CC;
+    outline-offset: 2px;
+}
+
+.work-step-card:focus {
+    transform: translateY(-8px) scale(1.08);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+.work-step-card:focus .work-step-video {
+    transform: scale(1.15);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .work-step-card,
+    .work-step-video,
+    .hover-background-overlay {
+        transition: none;
+    }
+    
+    .work-step-card:hover,
+    .work-step-card:focus {
+        transform: none;
+    }
+    
+    .work-step-card:hover .work-step-video,
+    .work-step-card:focus .work-step-video {
+        transform: none;
+    }
+    
+    .work-steps-grid:hover .work-step-card:not(:hover) {
+        transform: none;
+    }
+}
+
+/* Animation for cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.work-step-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.work-step-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.work-step-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.work-step-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.work-step-card:nth-child(4) {
+    animation-delay: 0.4s;
+}

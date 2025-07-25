@@ -1,0 +1,420 @@
+/* Video Section Component Styles */
+.video-section {
+    position: relative;
+    padding: 60px 20px;
+    background: #F8F9FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.video-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.video-player-wrapper {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #000000;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Background Video */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Video Overlay */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.7) 0%,
+            rgba(0, 0, 0, 0.4) 50%,
+            rgba(0, 0, 0, 0.6) 100%);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    box-sizing: border-box;
+}
+
+.video-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Text Content */
+.video-text-content {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
+
+.video-title {
+    font-family: var(--font-family-montserrat);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.2;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.video-description {
+    font-family: var(--font-family-montserrat);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #E5E7EB;
+    margin: 0;
+}
+
+.video-subtitle {
+    font-family: var(--font-family-montserrat);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #D1D5DB;
+    margin: 0;
+}
+
+.video-cta-container {
+    margin-top: 16px;
+}
+
+/* Watch Demo Button */
+.watch-demo-container {
+    position: absolute;
+    bottom: -10%;
+    right: -5%;
+    z-index: 4;
+}
+
+.watch-demo-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 1);
+    border: none;
+    border-radius: 50px;
+    padding: 16px 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.watch-demo-button:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.watch-demo-button:active{
+    border: none;
+}
+
+.play-icon {
+    width: 2em;
+    height: auto;
+    object-fit: contain;
+}
+
+.watch-demo-text {
+    font-family: var(--font-family-montserrat);
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000;
+    white-space: nowrap;
+}
+
+/* Video Controls Overlay */
+.video-controls-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+.video-controls-overlay:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.play-button-center {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.play-button-center:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+.play-button-center::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 20px solid #000000;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    margin-left: 4px;
+    /* Slight offset for visual centering */
+}
+
+/* Large Desktop Responsive Design */
+@media (min-width: 1440px) {
+    .video-section {
+        padding: 80px 40px;
+    }
+
+    .video-player-wrapper {
+        height: 700px;
+    }
+
+    .video-overlay {
+        padding: 80px;
+    }
+
+    .video-title {
+        font-size: 56px;
+    }
+
+    .video-description {
+        font-size: 20px;
+    }
+}
+
+/* Tablet Responsive Design */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .video-section {
+        padding: 40px 20px;
+    }
+
+    .video-player-wrapper {
+        height: 500px;
+    }
+
+    .video-overlay {
+        padding: 40px;
+    }
+
+    .video-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .video-text-content {
+        max-width: 100%;
+    }
+
+    .video-title {
+        font-size: 40px;
+    }
+
+    .video-description {
+        font-size: 16px;
+    }
+
+    .video-subtitle {
+        font-size: 14px;
+    }
+
+    .watch-demo-container {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        z-index: 4;
+    }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .video-section {
+        padding: 30px 15px;
+        min-height: 70vh;
+    }
+
+    .video-player-wrapper {
+        height: 450px;
+        border-radius: 16px;
+    }
+
+    .video-overlay {
+        padding: 30px 25px;
+    }
+
+    .video-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        height: auto;
+        justify-content: space-between;
+    }
+
+    .video-text-content {
+        gap: 20px;
+    }
+
+    .video-title {
+        font-size: 32px;
+        line-height: 1.3;
+    }
+
+    .video-description {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .video-subtitle {
+        font-size: 14px;
+    }
+
+    .watch-demo-container {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        z-index: 4;
+    }
+
+    .watch-demo-button {
+        padding: 14px 20px;
+        gap: 10px;
+    }
+
+    .play-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .watch-demo-text {
+        font-size: 14px;
+    }
+
+    .play-button-center {
+        width: 60px;
+        height: 60px;
+    }
+
+    .center-play-icon {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* Small Mobile Responsive Design */
+@media (max-width: 480px) {
+    .video-section {
+        padding: 20px 10px;
+        min-height: 60vh;
+    }
+
+    .video-player-wrapper {
+        height: 350px;
+        border-radius: 12px;
+    }
+
+    .video-overlay {
+        padding: 20px;
+    }
+
+    .video-content {
+        gap: 25px;
+    }
+
+    .video-text-content {
+        gap: 16px;
+    }
+
+    .video-title {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .video-description {
+        font-size: 14px;
+    }
+
+    .video-subtitle {
+        font-size: 13px;
+    }
+
+    .watch-demo-button {
+        padding: 12px 16px;
+        gap: 8px;
+    }
+
+    .play-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .watch-demo-text {
+        font-size: 13px;
+    }
+
+    .play-button-center {
+        width: 50px;
+        height: 50px;
+    }
+
+    .center-play-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Focus and Accessibility */
+.watch-demo-button:focus,
+.video-controls-overlay:focus {
+    outline: 2px solid #3FD1CC;
+    outline-offset: 2px;
+}
+
+/* Animation for video state changes */
+.video-controls-overlay {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.video-controls-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}

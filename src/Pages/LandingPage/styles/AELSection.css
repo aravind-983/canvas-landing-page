@@ -1,0 +1,255 @@
+.ael-section {
+    position: relative;
+    padding: 0 0 2em 0;
+    background: #FFFFFF;
+    overflow: hidden;
+    margin: 0;
+}
+
+.ael-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.ael-ellipse {
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 20%;
+    height: auto;
+    opacity: 0.6;
+}
+
+.ael-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.ael-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.ael-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.section-accent {
+    width: 60px;
+    height: 4px;
+    background: var(--gradient);
+    border-radius: 2px;
+}
+
+.ael-title {
+    font-family: var(--font-family-montserrat);
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 1.2;
+    color: #000000;
+    margin: 0;
+}
+
+.ael-features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 40px 0;
+    width: 100%;
+}
+
+.ael-feature-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.4em;
+    border: 1px solid #E5E5E5;
+    border-radius: 12px;
+    background: #FFFFFF;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease, opacity 0.8s ease-out, transform 0.8s ease-out;
+    width: 100%;
+    max-height: 10em;
+    max-width: 100%;
+    box-sizing: border-box;
+    min-height: 8em;
+}
+
+
+.ael-features.visible .ael-feature-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ael-feature-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #3FD1CC;
+    background: rgba(63, 209, 204, 0.05);
+}
+
+.ael-feature-icon {
+    padding: 1em 0em 1em 1em;
+    flex-shrink: 0;
+    width: 3em;
+    height: auto;
+    margin: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ael-feature-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.ael-feature-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    padding: 1em 0em;
+}
+
+.ael-feature-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.ael-feature-title {
+    font-family: var(--font-family-montserrat);
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000;
+    margin: 0;
+}
+
+.ael-feature-badge {
+    font-family: var(--font-family-montserrat);
+    max-width: 10em;
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFFFFF;
+    background: #3FD1CC;
+    padding: 4px 8px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.ael-feature-description {
+    font-family: var(--font-family-montserrat);
+    font-size: 14px;
+    color: #666666;
+    margin: 0;
+}
+
+/* .ael-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.ael-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+} */
+
+.ael-video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: contain;
+    display: block;
+    pointer-events: none; /* Prevent any interaction including controls on hover */
+}
+
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1439px) {
+    .ael-container {
+        padding: 0 40px;
+    }
+
+    .ael-content {
+        gap: 40px;
+    }
+
+    .ael-title {
+        font-size: 2em;
+    }
+
+    .ael-ellipse {
+        width: 25%;
+        top: 5%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .ael-section {
+        padding: 2em 0;
+    }
+
+    .ael-container {
+        padding: 0 30px;
+    }
+
+    .ael-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .ael-title {
+        font-size: 1.7em;
+    }
+
+    .ael-feature-card {
+        width: 100%;
+        text-align: left;
+    }
+
+    .ael-ellipse {
+        width: 40%;
+        top: 10%;
+        right: -20%;
+    }
+}
+
+@media (max-width: 480px) {
+    .ael-container {
+        padding: 0 20px;
+    }
+
+    .ael-title {
+        font-size: 1.5em;
+    }
+
+    .ael-feature-card {
+        padding: 16px;
+    }
+}

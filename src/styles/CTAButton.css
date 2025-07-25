@@ -1,0 +1,137 @@
+/* CTA Button Component Styles */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 16px;
+    background: var(--gradient);
+    border: none;
+    border-radius: 20px;
+    font-family: var(--font-family-nunito);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: var(--cta-text);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.3s ease;
+    position: relative;
+    flex-shrink: 0;
+    max-width: 100%;
+    min-width: 120px;
+    overflow: hidden;
+}
+
+/* Inner gradient border */
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: var(--cta-bg);
+    border-radius: 18px;
+    z-index: 0;
+    background-color: #ffffff;
+}
+
+/* Right-to-left sliding background effect */
+.cta-button::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    width: 0;
+    background: #000000;
+    border-radius: 18px;
+    z-index: 1;
+    transition: width 0.3s ease;
+}
+
+.cta-button > * {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: none;
+    color: #FFFFFF;
+}
+
+.cta-button:hover::after {
+    width: calc(100% - 4px);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+/* Icon container */
+.cta-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 22px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.gradient-bar {
+    width: 100%;
+    height: 100%;
+    background: var(--gradient);
+    border-radius: 4px;
+    position: relative;
+}
+
+.arrow-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+        gap: 8px;
+    }
+
+    .cta-icon {
+        width: 28px;
+        height: 18px;
+    }
+
+    .arrow-icon {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-button {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+        gap: 6px;
+    }
+
+    .cta-icon {
+        width: 24px;
+        height: 16px;
+    }
+
+    .arrow-icon {
+        width: 14px;
+        height: 14px;
+    }
+}
