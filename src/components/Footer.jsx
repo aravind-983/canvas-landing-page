@@ -2,10 +2,10 @@ import '../styles/Footer.css';
 import CTAButton from './CTAButton';
 
 // Import social media icons
-import FacebookIcon from '../assets/footer/fb.svg';
-import TwitterIcon from '../assets/footer/X.svg';
-import YoutubeIcon from '../assets/footer/yt.svg';
-import LinkedinIcon from '../assets/footer/linkedin.svg';
+import FacebookIcon from '../assets/Footer/fb.svg';
+import TwitterIcon from '../assets/Footer/X.svg';
+import YoutubeIcon from '../assets/Footer/yt.svg';
+import LinkedinIcon from '../assets/Footer/linkedin.svg';
 
 const Footer = () => {
     return (

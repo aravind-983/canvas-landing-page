@@ -5,7 +5,7 @@ import useScrollAnimation from '../../../hooks/useScrollAnimation';
 
 // Import assets
 import DetailsIcon1 from '../assets/details-section/details-icon1.svg';
-import DetailsIcon2 from '../assets//details-section/details-icon2.svg';
+import DetailsIcon2 from '../assets/details-section/details-icon2.svg';
 import DetailsIcon3 from '../assets/details-section/details-icon3.svg';
 import Ellipse812 from '../assets/details-section/Ellipse 812.svg';
 import Ellipse813 from '../assets/details-section/Ellipse 813.svg';
