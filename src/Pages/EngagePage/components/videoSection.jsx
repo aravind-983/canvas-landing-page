@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CTAButton from '../../../components/CTAButton';
 import PlayIcon from '../assets/video-section/Play.png';
-import EngageVideo from '../assets/video-section/Engage page.mp4';
+import EngageVideo from '../assets/video-section/Engage page First Scroll.mp4';
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
 import '../styles/videoSection.css';
 
