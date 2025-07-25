@@ -5,7 +5,7 @@ import '../styles/engageFeatures.css';
 // Import assets
 import MonetizeIcon1 from '../assets/engage-features/engage-icon1.svg';
 import MonetizeIcon2 from '../assets/engage-features/engage-icon2.svg';
-import MonetizeIcon3 from '../assets/engage-features/engage-Icon3.svg';
+import MonetizeIcon3 from '../assets/engage-features/engage-icon3.svg';
 import Ellipse811 from '../assets/engage-features/Ellipse 811.svg';
 
 const EngageFeatures = () => {
