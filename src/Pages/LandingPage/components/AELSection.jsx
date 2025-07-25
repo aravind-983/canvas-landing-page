@@ -1,6 +1,5 @@
 import EllipseBackground from '../assets/ael-section/Ellipse 811.svg';
 import AELVideo from '../assets/ael-section/Canvas AEL (Second Scroll.mp4';
-import AELImage from '../assets/ael-section/AELImage.png';
 import Icon1 from '../assets/ael-section/Icon1.svg';
 import Icon2 from '../assets/ael-section/Icon2.svg';
 import Icon3 from '../assets/ael-section/Icon3.svg';
