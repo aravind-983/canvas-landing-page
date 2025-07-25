@@ -87,7 +87,7 @@
 /* Background overlay activation on card hover */
 .work-step-card:hover ~ .hover-background-overlay,
 .work-section:has(.work-step-card:hover) .hover-background-overlay {
-    opacity: 1;
+    /* opacity: 1; */
     visibility: visible;
 }
 
