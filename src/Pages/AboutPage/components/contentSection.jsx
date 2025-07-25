@@ -84,7 +84,7 @@ const ContentSection = () => {
                                     <img src={GroupIcon2} alt="Behavioral AI + Heatmaps" />
                                 </div>
                                 <div className="content-feature-info">
-                                    <h4 className="content-feature-title">Behavioral AI +<br />Heatmaps</h4>
+                                    <h4 className="content-feature-title">Behavioral   AI +<br />Heatmaps</h4>
                                 </div>
                             </div>
 

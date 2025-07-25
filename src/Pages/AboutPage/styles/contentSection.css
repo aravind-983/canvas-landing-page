@@ -101,7 +101,7 @@
 .content-right-column {
     display: flex;
     flex-direction: column;
-    /* gap: 40px; */
+    margin: 0 0 0 6em;
 }
 
 .content-powered-title {
@@ -111,7 +111,7 @@
     line-height: 1.4;
     color: #000000;
     margin: 1em;
-    text-align: center;
+    text-align: left;
 }
 
 /* Features Grid */
@@ -119,7 +119,7 @@
     display: flex;
     flex-direction: column;
     gap: 2em;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .content-feature-item {

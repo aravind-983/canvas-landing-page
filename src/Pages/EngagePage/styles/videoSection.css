@@ -259,8 +259,8 @@
 
     .watch-demo-container {
         position: absolute;
-        bottom: 20px;
-        right: 20px;
+        bottom: -3%;
+        right: 0%;
         z-index: 4;
     }
 }
@@ -309,8 +309,8 @@
 
     .watch-demo-container {
         position: absolute;
-        bottom: 15px;
-        right: 15px;
+        bottom: -8%;
+        right: 0%;
         z-index: 4;
     }
 
