@@ -1,4 +1,4 @@
-import HeroVideo from '../assets/hero-section/About Page.mov';
+import HeroVideo from '../assets/hero-section/About page.mov';
 import CTAButton from '../../../components/CTAButton';
 import useScrollAnimation from '../../..//hooks/useScrollAnimation';
 import '../styles/HeroSection.css';
