@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import React from 'react';
 import '../styles/DetailsSection.css';
 import CTAButton from '../../../components/CTAButton';
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
+import { useFormModal } from '../../../contexts/FormModalContext';
 
 // Import assets
 import DetailsIcon1 from '../assets/details-section/details-icon1.svg';
@@ -19,26 +20,8 @@ const DetailsSection = () => {
     const [featuresRef, isFeaturesVisible] = useScrollAnimation({ rootMargin: '-50px 0px' });
     const [bottomRef, isBottomVisible] = useScrollAnimation({ rootMargin: '-100px 0px' });
 
-    const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        companyName: ''
-    });
-
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }));
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('Form submitted:', formData);
-        // Handle form submission logic here
-    };
+    // Use shared form data from context
+    const { formData, handleInputChange, handleSubmit } = useFormModal();
 
     return (
         <section ref={sectionRef} className={`details-section fade-in-section ${isVisible ? 'visible' : ''}`}>

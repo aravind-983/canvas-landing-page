@@ -118,12 +118,12 @@
 
 .impact-cta-description {
     font-family: var(--font-family-montserrat);
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: 700;
+    font-size: 30px;
     line-height: 1.6;
     color: #E5E7EB;
     margin: 0;
-    max-width: 700px;
+    max-width: 600px;
 }
 
 .impact-cta-button-container {
@@ -155,7 +155,7 @@
 
     .impact-stats-subtitle,
     .impact-cta-description {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .impact-partners-title {

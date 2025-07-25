@@ -14,8 +14,7 @@ const ImpactSection = () => {
                 <div className="impact-stats-container">
                     <h2 className="impact-stats-title">Where we're going?</h2>
                     <p className="impact-stats-subtitle">
-                        We're working with OTT studios, live sports broadcasters, and<br />
-                        CMS platforms globally.
+                    We’re unlocking a new layer of monetization — one built on <br /> behavior, not just views.
                     </p>
                     
                     <h3 className="impact-partners-title">Our partners are seeing:</h3>
@@ -54,10 +53,9 @@ const ImpactSection = () => {
             {/* Bottom Section - CTA */}
             <div className="impact-cta-section">
                 <div ref={ctaRef} className={`impact-cta-container fade-in-section ${isCtaVisible ? 'visible' : ''}`}>
-                    <h2 className="impact-cta-title">Where we're going?</h2>
                     <p className="impact-cta-description">
-                        Canvas is more than an engagement layer — it's a signal engine<br />
-                        that monetizes behavior & engages across every video surface.
+                        Canvas is more than an engagement skin — it's a signal engine
+                        that monetizes behavior across every video surface.
                     </p>
                     
                     <div className="impact-cta-button-container">

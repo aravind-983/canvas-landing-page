@@ -1,6 +1,6 @@
 import ArrowRight from '../assets/ctabutton/Arrow-right.svg';
 import '../styles/CTAButton.css';
-import useRequestDemoNavigation from '../hooks/useRequestDemoNavigation';
+import { useFormModal } from '../contexts/FormModalContext';
 
 const CTAButton = ({ 
     className = '', 
@@ -9,13 +9,13 @@ const CTAButton = ({
     textColor = '',
     onClick
   }) => {
-  const { navigateToRequestDemo } = useRequestDemoNavigation();
+  const { openModal } = useFormModal();
 
   const handleClick = () => {
     if (onClick) {
       onClick();
     } else if (name.toLowerCase().includes('request demo')) {
-      navigateToRequestDemo();
+      openModal();
     } else {
       console.log(`${name} clicked`);
     }
