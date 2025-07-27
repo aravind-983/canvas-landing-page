@@ -29,9 +29,9 @@
 }
 
 .hero-container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 3em;
   position: relative;
   z-index: 1;
 }
@@ -123,7 +123,7 @@
 /* Tablet Responsive Design */
 @media (min-width: 769px) and (max-width: 1439px) {
   .hero-container {
-    padding: 0 40px;
+    padding: 0 1em;
   }
   
   .hero-content {
@@ -151,7 +151,7 @@
   }
   
   .hero-container {
-    padding: 0 30px;
+    padding: 0 1em;
   }
   
   .hero-content {
@@ -177,6 +177,6 @@
 
 @media (max-width: 480px) {
   .hero-container {
-    padding: 0 20px;
+    padding: 0 1em;
   }
 }

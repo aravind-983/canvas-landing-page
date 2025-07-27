@@ -306,9 +306,9 @@ const Carousel = () => {
                                     <div className="content-box">
                                         <div className="content-left">
                                             <div className="robot-container">
-                                            <div className="robot-container">
-                                                <img src={OTT} alt="OTT STUDIO" className="robot-image" />
-                                            </div>
+                                                <div className="robot-container">
+                                                    <img src={OTT} alt="OTT STUDIO" className="robot-image" />
+                                                </div>
                                             </div>
                                             <div className="testimonial-text">
                                                 <p>"Canvas gave us audience intelligence and monetization — without interrupting user flow."</p>

@@ -45,6 +45,7 @@ const WorkSection = () => {
     const [sectionRef, isVisible] = useScrollAnimation();
     const [titleRef, isTitleVisible] = useScrollAnimation({ rootMargin: '-100px 0px' });
     const [gridRef, isGridVisible] = useScrollAnimation({ rootMargin: '-100px 0px' });
+    const [bottomRef, isBottomVisible] = useScrollAnimation({ rootMargin: '-50px 0px' });
 
     return (
         <section ref={sectionRef} className={`work-section fade-in-section ${isVisible ? 'visible' : ''}`}>
@@ -202,9 +203,10 @@ const WorkSection = () => {
                 </div>
 
                 {/* Bottom Content */}
-                <div className="work-bottom-content">
+                <div ref={bottomRef} className={`work-bottom-content fade-in-section ${isBottomVisible ? 'visible' : ''}`}>
                     <h3 className="work-bottom-title">
-                        Canvas is built as adaptive infrastructure. No player dependency. Works across CMS, OTT, and live feeds
+                        Canvas is built as adaptive infrastructure. 
+                        <span className="work-bottom-highlight">No player dependency.</span> Works across CMS, OTT, and live feeds
                     </h3>
 
                     <div className="work-cta-container">

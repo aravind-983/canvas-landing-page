@@ -12,7 +12,7 @@ const HeroSection = () => {
   return (
     <section ref={sectionRef} className={`about-hero-section fade-in-section ${isVisible ? 'visible' : ''}`}>
       {/* Ellipse background */}
-      <div className="hero-container">
+      <div className="about-hero-container">
         <div className="hero-content">
           <div ref={textRef} className={`hero-text slide-in-left ${isTextVisible ? 'visible' : ''}`}>
             <h1 className="about-hero-title">

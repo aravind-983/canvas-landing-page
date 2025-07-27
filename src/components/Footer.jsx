@@ -17,17 +17,30 @@ const Footer = () => {
                     <div className="footer-left-column">
                         <h3 className="footer-section-title">Get Started</h3>
                         <nav className="footer-nav">
-                            <ul className="footer-nav-list">
-                                <li className="footer-nav-item">
-                                    <a href="#about" className="footer-nav-link">About</a>
-                                </li>
-                                <li className="footer-nav-item">
-                                    <a href="#contact" className="footer-nav-link">Contact Us</a>
-                                </li>
-                                <li className="footer-nav-item">
-                                    <a href="#demo" className="footer-nav-link">Watch Demo</a>
-                                </li>
-                            </ul>
+                            <div className="footer-nav-columns">
+                                {/* First Column */}
+                                <ul className="footer-nav-list">
+                                    <li className="footer-nav-item">
+                                        <a href="about" className="footer-nav-link">About</a>
+                                    </li>
+                                    <li className="footer-nav-item">
+                                        <a href="#contact" className="footer-nav-link">Contact Us</a>
+                                    </li>
+                                    <li className="footer-nav-item">
+                                        <a href="#demo" className="footer-nav-link">Watch Demo</a>
+                                    </li>
+                                </ul>
+
+                                {/* Second Column */}
+                                <ul className="footer-nav-list">
+                                    <li className="footer-nav-item">
+                                        <a href="/monetize" className="footer-nav-link">Canvas Monetize</a>
+                                    </li>
+                                    <li className="footer-nav-item">
+                                        <a href="/engage" className="footer-nav-link">Canvas Engage</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </nav>
 
                         {/* CTA Button */}

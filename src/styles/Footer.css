@@ -35,6 +35,11 @@
     margin: 0;
 }
 
+.footer-nav-columns {
+    display: flex;
+    gap: 4em;
+}
+
 .footer-nav-list {
     list-style: none;
     padding: 0;
@@ -234,6 +239,10 @@
         font-size: 20px;
     }
 
+    .footer-nav-columns {
+        gap: 24px;
+    }
+
     .footer-nav-link,
     .footer-address,
     .footer-email-link {
@@ -295,6 +304,10 @@
     .footer-section-title,
     .footer-company-title {
         font-size: 18px;
+    }
+
+    .footer-nav-columns {
+        gap: 20px;
     }
 
     .footer-social-media {
